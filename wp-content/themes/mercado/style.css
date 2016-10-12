@@ -1,0 +1,1808 @@
+/*
+Theme Name: Mercado
+Author: merca.cl
+Description: Plantilla con módulos personalizables
+Version: 1
+Text Domain: twentyfifteen
+Template: twentyfifteen
+*/
+
+@import '../twentyfifteen/style.css';
+
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+body {
+    background: #000;
+}
+
+body, button, input, select, textarea {
+    color: #FFF;
+
+    font-size: 1.9rem;
+	  hyphens: auto;
+}
+
+
+input, select, textarea {
+    color: #000;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    font-weight: normal;
+
+}
+
+.page-header {
+    background-color: transparent;
+    border-bottom: 0 none;
+    padding: 7.6923%;
+}
+
+.page-content {
+    background-color: transparent;
+    padding: 7.6923%;
+}
+
+.post-navigation {
+    background-color: transparent;
+    border-top: 0 none;
+}
+
+.entry-footer a, a {
+    color: #ffbf43;
+    text-decoration: none;
+}
+.entry-footer a:hover, .entry-footer a:focus, a:hover, a:focus {
+    color: #FFF;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    background-color: #3EA9F5;
+	  color:#000;
+}
+button:hover, input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+    background-color: #FFF;
+    outline: 0 none;
+}
+
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea {
+    border: 5px solid #3ea9f5;
+    border-radius: 8px;
+    padding: 0.2278em;
+}
+
+/* Tipografías */
+
+@import 'fonts/stylesheet.css';
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  font-size:2vmin;
+}
+
+*::-moz-placeholder {font-family: "open_sansregular", "Helvetica", Arial, sans-serif;}
+
+
+
+body, button, input, select, textarea,
+.comments-title, .comment-reply-title {
+    font-family: "open_sansregular", "Helvetica", Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6, .widget-title, .post-navigation .post-title, .page-title {
+    font-family: "open_sanssemibold", "Helvetica", Arial, sans-serif;
+}
+b, strong {
+    font-weight: normal; font-family: "open_sansbold", "Helvetica", Arial, sans-serif;
+}
+
+/* FIN Tipografías */
+
+
+.site {
+    margin: 0 auto;
+    max-width: 100%;
+
+}
+.site-main {
+    padding: 0;
+}
+
+.site-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.site-background img {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.hentry {
+    background-color: transparent;
+    padding-top: 7.6923%;
+    position: relative;
+}
+.entry-footer {
+    background-color: transparent;
+    color: #fff;
+}
+
+
+blockquote {
+    border-left: 4px solid #707070;
+    border-left: 4px solid rgba(51, 51, 51, 0.7);
+
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-style: italic;
+    line-height: 1.6667;
+    margin-bottom: 1.6667em;
+    padding-left: 0.7778em;
+}
+.comment-form label, blockquote {color: #fff;}
+
+.comments-area {
+    background-color: transparent;
+color:#fff;
+}
+
+.comment-notes, .comment-awaiting-moderation, .logged-in-as, .form-allowed-tags {
+    color: #fff;
+}
+
+/* Site Logo */
+.cart-tab {}
+.cart-tab::after {
+  content: "";
+  position: absolute;
+  left: -240px;
+  width: 160px;
+  height: 121px;
+/*  background: transparent url('http://merca.cl/site/wp-content/uploads/2015/10/header_newsletter_003-300x226.png') no-repeat 0 50% / contain; */
+  top: -9px;
+}
+.cart-tab a.cart-parent {
+    padding: 1.618em 1.618em 1.618em 3.818em;
+}
+
+
+.cart-tab a.cart-parent span.amount,
+.cart-tab a.cart-parent span.contents {
+    color: #666;
+}
+
+.site-header {
+    background-color: transparent;
+    border-bottom: 0;
+    margin: 0;
+    padding: 0;
+    position:relative;
+}
+.site-branding {
+    width: 40%;
+    margin-right: 80%;
+    min-height: 20vh;
+}
+.site-branding > a {
+    width: 100%;
+    display: block;
+    height: 0px;
+    padding-bottom: 20%;
+}
+.site-title,
+.site-description {
+    text-indent:-99999px;
+  }
+.site-content {
+    display: block;
+    float: left;
+    margin-left: 0;
+    width: 100%;
+}
+
+.sidebar {
+    float: left;
+    margin-right: 0;
+    max-width: 413px;
+    position: relative;
+    width: 0;
+	overflow: hidden;
+}
+
+
+
+.site-footer {
+    background: #000 none repeat scroll 0 0;
+    color: #fff;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.site-footer .widget-area {
+  -moz-column-count:3;
+  -moz-column-gap: 3%;
+  -moz-column-width: 30%;
+  -webkit-column-count:3;
+  -webkit-column-gap: 3%;
+  -webkit-column-width: 30%;
+  column-count: 3;
+  column-gap: 3%;
+  column-width: 30%;
+}
+.site-footer .widget-area > div {
+display: inline-block;
+padding:4%;
+
+}
+.site-footer .site-info {
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  margin: 2% auto;
+  position: relative;
+  width: 5%;
+  margin-left: 0 auto;
+  overflow: visible;
+  min-height: unset;
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 5%;
+}
+.site-footer .site-info:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  bottom: 0;
+  display: block;
+  left: 0;
+  right: 0;
+ }
+
+.site-footer .social-navigation ul,
+.site-footer .menu-redes-sociales-container ul {
+    width: auto;
+    margin: 0;
+    display:block;
+    list-style:0 none;
+}
+
+.site-footer .social-navigation ul li,
+.site-footer .menu-redes-sociales-container ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer a {
+  color:#FFF;
+}
+
+body::before {
+    width: 0;
+}
+body::before {
+    width: auto;
+}
+
+.social-navigation {
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.social-navigation a::before {
+  font-size: 3vmin;
+  position: relative;
+  margin: 20%;
+}
+
+
+.modulo-landing-wrapper {
+	list-style:none;
+	padding:0;
+	margin:0;
+	position:relative;
+   font-size: 2.2vw;
+    line-height: 120%;
+}
+
+
+.ml-background,
+.modulo-landing-ontop,
+.ml-background-img,
+.ml-background-url {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100%;
+}
+
+
+
+
+.modulo-landing-ontop {
+	z-index: 2;
+	padding: 11vh 11vw;
+	position: relative;
+	height: auto;
+  overflow:hidden;
+}
+
+
+.modulo-landing-wrapper .modulo-landing {
+	background-color: #000;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #FFF;
+	display: block;
+	position: relative;
+	text-align: center;
+	width: 100vw;
+	overflow: hidden;
+	height: auto;
+  border-bottom: 1px dashed #3E3E3E;
+}
+.modulo-landing-wrapper .modulo-landing.izquierda .ml-background-img,
+.modulo-landing-wrapper .modulo-landing.izquierda.fondo-izquierda .ml-background-img,
+.modulo-landing-wrapper .modulo-landing.derecha.fondo-izquierda .ml-background-img {
+background-position: 0 0;
+}
+.modulo-landing-wrapper .modulo-landing.derecha .ml-background-img,
+.modulo-landing-wrapper .modulo-landing.derecha.fondo-derecha .ml-background-img,
+.modulo-landing-wrapper .modulo-landing.izquierda.fondo-derecha .ml-background-img {
+background-position: 100% 0;
+}
+.modulo-landing-wrapper .modulo-landing.fondo-centrado .ml-background-img {
+background-position: center center;
+}
+.modulo-landing-wrapper .modulo-landing.con-sidebar {
+	height:auto;
+}
+
+.background-url {
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+background-color: transparent;
+}
+
+.modulo-landing-wrapper .modulo-landing.con-sidebar .modulo-landing-ontop {
+	padding: 0 0;
+}
+
+.modulo-landing-wrapper .modulo-landing  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+
+	background-size: cover;
+	transition: 1s opacity;
+
+
+}
+
+.modulo-landing-wrapper .modulo-landing .modulo-landing-mascara-video {
+	background:rgba(0, 0, 0, 0.5)  url('images/merca_web_mascara-video_001.png') 50% 50% no-repeat;
+	background-size:cover;
+	content:" ";
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	z-index:-1;
+}
+
+.modulo-landing-wrapper .modulo-landing .modulo-landing-logo {
+    list-style: outside none none;
+    white-space: nowrap;
+    padding: 0px;
+    margin: 2%;
+}
+	.modulo-landing-wrapper .modulo-landing  .modulo-landing-logo:after {display:block; content:""; float:none; clear:both;}
+	.modulo-landing-wrapper .modulo-landing  .modulo-landing-logo .logo {
+display: inline-block;
+width: 100%;
+max-width: 33%;
+}
+
+	.modulo-landing-wrapper .modulo-landing  .modulo-landing-logo .logo.grilla-3 {width:33%;}
+
+
+
+.modulo-landing-wrapper .modulo-landing .modulo-landing-titulo {
+    line-height: 120%;
+    font-size: 4vw;
+    text-align:left;
+}
+.modulo_landing_barra_lateral_derecha .modulo-landing-titulo {
+  text-align:right;
+}
+.modulo-landing-wrapper .modulo-landing .modulo-landing-txt {
+  font-size: 2vmin;
+  line-height: 140%;
+  letter-spacing: 1px;
+  text-align: left;
+  hyphens: none;
+}
+.modulo-landing-wrapper .modulo-landing.izq .modulo-landing-txt,
+.left .modulo-landing-wrapper .modulo-landing .modulo-landing-txt,
+.left #mc_embed_signup form {
+  text-align:left;
+}
+
+.center .site-footer .site-info::after {
+    left: 0%;
+    margin-left: 0%;
+}
+.modulo-landing-wrapper .modulo-landing.centro .modulo-landing-txt,
+.center .modulo-landing-wrapper .modulo-landing .modulo-landing-txt,
+.center #mc_embed_signup form {
+  text-align:center;
+}
+
+.center .site-footer .site-info::after {
+  left: auto;
+  margin-left: 0;
+  width: 100%;
+}
+.modulo-landing-wrapper .modulo-landing.der .modulo-landing-txt,
+.right .modulo-landing-wrapper .modulo-landing .modulo-landing-txt,
+.right #mc_embed_signup form {
+  text-align:center;
+}
+
+.right .site-footer .site-info::after {
+    left: 100%;
+    margin-left: -20%;
+}
+
+
+.modulo-landing-wrapper .modulo-landing .modulo-landing-txt h1,
+.modulo-landing-wrapper .modulo-landing .modulo-landing-txt h2,
+.modulo-landing-wrapper .modulo-landing .modulo-landing-txt h3,
+.modulo-landing-wrapper .modulo-landing .modulo-landing-txt h4,
+.modulo-landing-wrapper .modulo-landing .modulo-landing-txt h5,
+.modulo-landing-wrapper .modulo-landing .modulo-landing-txt h6 {margin-bottom:2%; line-height: 120%;}
+.modulo-landing-wrapper .modulo-landing .modulo-landing-txt h1 {font-size: 5vmin;}
+.modulo-landing-wrapper .modulo-landing .modulo-landing-txt h2 {font-size: 4.5vmin;}
+.modulo-landing-wrapper .modulo-landing .modulo-landing-txt h3 {font-size: 4vmin;}
+.modulo-landing-wrapper .modulo-landing .modulo-landing-txt h4 {font-size: 3vmin;}
+.modulo-landing-wrapper .modulo-landing .modulo-landing-txt h5 {font-size: 3vmin;}
+.modulo-landing-wrapper .modulo-landing .modulo-landing-txt h6 {font-size: 3vmin;}
+
+.modulo-landing-wrapper .caja-blanca {padding:1%; background:#fff;}
+.modulo-landing-wrapper .caja-negra {padding:1%; background:#000;}
+
+.modulo-landing-wrapper .modulo-landing.con-sidebar .wrapper {
+	/*padding: 25vh 3%;*/
+  padding: 3%;
+	width:70vw;
+	min-height:50vh;
+  height:auto;
+    display: block;
+    float: left;
+   /* margin-right: 29.4118%;*/
+
+}
+.modulo-landing-wrapper .modulo-landing.con-sidebar.derecha .wrapper {
+  float:right;
+}
+
+.gallery-caption {color:#ffffff; }
+.modulo-landing-txt .gallery-caption {
+  color: #ffffff;
+  font-size: 2.5vmin;
+  word-break: unset;
+  hyphens: auto;
+  white-space: unset;
+
+}
+
+.gallery-caption h1,
+.gallery-caption h2,
+.gallery-caption h3,
+.gallery-caption h4,
+.gallery-caption h5,
+.gallery-caption h6 {
+    font-size: 3vh;
+}
+
+
+
+.modulo-landing-wrapper .modulo-landing  .modulo_landing_barra_lateral_derecha {
+    background: transparent none repeat scroll 0 0;
+    float: left;
+    min-height: 80vh;
+    height:auto;
+    padding: 4% 2%;
+    position: relative;
+    width: 30vw;
+
+	line-height:110%;
+  text-align:left;
+  padding-bottom:15%;
+}
+.modulo-landing-wrapper .modulo-landing.sin-header  .modulo_landing_barra_lateral_derecha,
+.modulo-landing-wrapper .modulo-landing.con-sidebar.sin-header .wrapper {
+  min-height:100vh;
+}
+
+.modulo-landing-wrapper .modulo-landing.con-sidebar.derecha  .modulo_landing_barra_lateral_derecha {
+  float:right;
+}
+
+.sidebar-content {
+    float: left;
+    width: 100%;
+    display: block;
+    padding:0 10%;
+}
+.sidebar-content h1,
+.sidebar-content h2,
+.sidebar-content h3,
+.sidebar-content h4,
+.sidebar-content h5{
+  font-size:3vw;
+}
+
+.modulo_landing_barra_lateral_derecha ul {
+  text-align: right;
+  padding: 2%;
+}
+.modulo_landing_barra_lateral_derecha ul li {
+  margin: 1%;
+  line-height: 120%;
+}
+
+.modulo-landing-barra_lateral_derecha-logo {
+	margin-bottom:4%;
+}
+
+.modulo_landing_barra_lateral_derecha .gallery-caption {
+  color:#fff;
+}
+
+/* Contact Form 7 */
+
+div.wpcf7 {
+    /*font-size: 60%;*/
+    margin: 0;
+    padding: 0;
+}
+
+
+.social-navigation ul {
+    list-style: outside none none;
+    display: table;
+    width: 100%;
+    margin: 0;
+}
+
+.social-navigation li {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    float:none;
+}
+
+.social-navigation a {
+  display: block;
+  height: 6vmin;
+  position: relative;
+  width: 6vmin;
+  color: #fff;
+  background: #000;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  padding: 0;
+  text-align: center;
+  padding-bottom: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+  border: 0 none;
+  border-radius: 8px;
+  padding: 2% 4%;
+  font-size: 2vmin;
+  line-height: 180%;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background-color: #fff;
+  color: #000;
+}
+
+
+.staff {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  float: left;
+font-size: 2vmin;
+line-height: 140%;
+}
+
+.staff > li {
+    list-style:none;
+    padding:1%;
+    margin:0;
+    float:left;
+    width:25%;
+}
+.staff:after {clear:both; float:none; display:block; content:" ";}
+
+
+
+#cff {
+    float: left;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 2vmin;
+}
+
+#mc_embed_signup h2 {
+    font-size: 3vmin;
+}
+
+
+
+/* Menu Shortcode */
+
+.entry-content .enhance_shortcode_menu_inline li,
+.enhance_shortcode_menu_inline li {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+/* WooCommerce */
+p.demo_store,
+.admin-bar p.demo_store {
+    bottom: 0;
+    top: auto;
+    font-size: 50%;
+}
+
+.twentyfifteen .t15wc {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 3%;
+    margin-top: 0;
+	background:transparent none;
+}
+
+.woocommerce .woocommerce-breadcrumb {
+    margin: 0px 0px 1em;
+    padding: 0px;
+    font-size: 0.52em;
+    color: #777;
+}
+
+
+.woocommerce div.product {
+    padding: 0px;
+   /* font-size: 60%;
+    line-height: 100%;*/
+}
+
+.woocommerce div.product .product_title {
+    clear: none;
+    margin-top: 0px;
+    padding: 0px;
+    line-height: 100%;
+   /* text-transform: uppercase;*/
+    hyphens: none;
+}
+
+
+ul.tabs li {background:transparent !important;}
+
+ul.tabs.one li {display:none !important;}
+
+
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+    list-style: outside none none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    border-radius: 0px;
+    padding: 0px 1em;
+    margin: 0px;
+    border: 0px none;
+    font-size: 80%;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li:first-child {}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after,
+.woocommerce div.product .woocommerce-tabs ul.tabs li::before {border:0 none; box-shadow:none;}
+
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+    background: #000 !important;
+    border-radius: 12px 12px 0 0;
+    color: #fff !important;
+}
+
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active::before,
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active::after {
+    box-shadow: none;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs::before {border:0 none;}
+
+.woocommerce div.product .woocommerce-tabs .panel {
+margin: 0 0 2em;
+padding: 0 1%;
+background: rgba(0,0,0,0.5);
+}
+.woocommerce div.product .woocommerce-tabs .panel h2:first-child {
+background: #000;
+text-align: right;
+padding: 3%;
+margin: 0 -1% 1em -1%;
+color: rgba(255,255,255,0.2);
+text-transform: uppercase;
+font-size: 120%;
+}
+
+/* Variaciones Fixed */
+
+.variations_form {
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+width: 30%;
+font-size: 70%;
+padding-right: 2%;
+background: rgba(0,0,0,0.3);
+padding-left: 2%;
+padding-top: 20%;
+}
+
+.variations_form table td.label {
+    width: 10%;
+}
+
+
+
+/* Crowdfunding */
+
+
+.woocommerce div.product.product_cat-crowdfunding form.cart {
+margin-bottom: 2em;
+background: #A44071 none repeat scroll 0% 0%;
+padding: 2%;
+margin-right: 0px;
+position: fixed;
+bottom: -28px;
+width: 43%;
+border-radius: 8px;
+z-index: 99999;
+box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.woocommerce div.product form.cart .button {
+    vertical-align: middle;
+    float: none;
+    animation: cubic-bezier(.77,-0.12,.07,.78) cubic-bezier;
+}
+.woocommerce div.product form.cart .button.animacion-pulso-constante {
+	-webkit-animation: 1s ease 0s normal none infinite running pulse;
+	-moz-animation: 1s ease 0s normal none infinite running pulse;
+	animation: 1s ease 0s normal none infinite running pulse;
+}
+
+/*
+#cf_update_total_funderers {display:none;}
+#cf_target_price_labelers {display:none;}
+#cf_total_raised_in_percentage { display:none; }
+#cf_total_price_raiser {display:none;}
+#cf_days_remainings {display:none;}
+#cf_days_remaining {display:none;}
+#cf_min_price_label { display:none; }
+#cf_max_price_label { display:none; }
+#cf_target_price_label { display:none; }
+#cf_total_price_raised {display:none;}
+#cf_total_price_in_percentage_with_bar {display:none;}
+#cf_total_price_in_percentage {display:none;}
+#single_product_contribution_table{ }
+#cf_serial_number_label{ }
+#cf_contributor_label{ }
+#cf_contributor_email_label{ }
+#cf_contribution_label{ }
+#cf_date_label{ }
+#serial_id{ }
+#cf_billing_first_name{ }
+#cf_billing_email{ }
+#cf_order_total{ }
+#cf_target_price_labels{ margin-bottom:0px; }
+#cf_total_price_raise{ float:left; }
+#cf_total_price_raise span {font-size:30px; }
+#cf_total_price_in_percent{ }
+#cf_total_price_in_percent_with_bar{
+	width: 100%;
+	height:12px;
+	background-color: #ffffff;
+	border-radius:10px;
+	border:1px solid #000000;
+	clear:both;
+}
+#cf_percent_bar{ height:10px;
+ border-radius:10px;
+ background-color: green;
+ }
+#cf_price_new_date_remain small { font-style:italic;  }
+#cf_price_new_date_remain { margin-bottom:0px;
+ float:left; }
+#singleproductinputfieldcrowdfunding{color:green; }
+#cf_target_price_labels {font-style:italic;
+ font-size:20px;
+ }
+#cf_update_total_funders {margin-bottom:0px; float:right; }
+#cf_total_raised_percentage {float:right;
+ font-size:30px !important;
+ margin-bottom:0px;
+}
+*/
+.single-product  {
+	position:relative;
+    color: #FFF;
+   /* background: transparent url("http://www.merca.cl/site/wp-content/uploads/2015/10/camilo-eque_web-fondo_001.jpg") no-repeat fixed 50% 50% / cover; */
+}
+
+
+.single-product::after {
+    background: rgba(0, 0, 0, 0.5) none no-repeat scroll 50% 50% / cover;
+    content: " ";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: -1;
+}
+
+
+#cf_total_price_in_percent_with_bar {
+    background-color: #4E4E4E !important;
+    margin: 4% 0px  !important;
+    border: 0 none  !important;
+}
+
+
+#cf_total_raised_percentage {
+    float: none !important;
+    font-size: 90px !important;
+    margin-bottom: 0px;
+    height: auto;
+    line-height: 100% !important;
+    text-align: right !important;
+}
+
+#cf_price_new_date_remain {
+    display: none;
+}
+
+.woocommerce div.product p.price,
+.woocommerce div.product span.price {
+    color: #fff;
+    background: transparent none repeat scroll 0% 0%;
+    width: auto;
+}
+
+
+
+.woocommerce div.product {
+    padding: 0px;
+	width:60%
+}
+.woocommerce #content div.product div.images,
+.woocommerce div.product div.images,
+.woocommerce-page #content div.product div.images,
+.woocommerce-page div.product div.images {
+    float: left;
+    width: 48%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.woocommerce #content div.product div.summary,
+.woocommerce div.product div.summary,
+.woocommerce-page #content div.product div.summary,
+.woocommerce-page div.product div.summary {
+float: left;
+width: 48%;
+background: rgba(0,0,0,0.5);
+padding: 3% !important;
+}
+.woocommerce div.product.product_cat-crowdfunding .entry-content {
+	hyphens:none;
+}
+
+.woocommerce div.product.product_cat-crowdfunding .entry-content h2:first-child {display:none;}
+
+.woocommerce div.product.product_cat-crowdfunding .entry-content ul {
+    padding: 3%;
+    font-size: 80%;
+}
+.woocommerce div.product.product_cat-crowdfunding .entry-content ul li {
+margin-bottom:1%;
+}
+
+.product .summary {
+    hyphens: none;
+}
+
+.product .summary label {
+    background: #000;
+    font-size: 60%;
+    padding: 1%;
+    border-radius: 4px;
+}
+
+.product .summary .progress-bar {
+    background: #A44071 none repeat scroll 0% 0%;
+    padding: 4%;
+    border-radius: 6px;
+}
+.product .summary .progress-bar:after {content:"";display:block;float:none; clear:both;}
+
+.product h3 {display:none;}
+
+
+.product_meta {
+    font-size: 70%;
+    opacity: 0.5;
+	-moz-opacity:0.5;
+	-webkit-opacity:0.5;
+}
+
+
+.product .container {
+	position:fixed;
+	width:25%;
+	overflow-y:hidden;
+	overflow-x:visible;
+	height:100%;
+	right:0;
+	top:0;
+}
+
+.product div[itemprop="description"] {
+font-size: 70%;
+font-weight: normal;
+text-align: left;
+padding: 4% 4% 4% 35%;
+background-color: rgba(0,0,0,0.8);
+border-radius: 6px;
+margin-top: 5px;
+
+text-shadow: 1px 1px 0px #000;
+position:relative;
+}
+.product div[itemprop="description"]:after {
+	content:"";
+	position:absolute;
+	background:transparent  url('http://merca.cl/site/wp-content/uploads/2015/10/header_newsletter_003-300x226.png') 0 50% no-repeat;
+	background-size: contain;
+	left:0;
+	width:30%;
+	top:0;
+	bottom:0;
+}
+
+.product .amount {
+    font-size: 140%;
+    text-shadow: 1px 1px 0px rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+
+
+#singleproductinputfieldcrowdfunding {
+    color: #FFF !important;
+}
+
+
+.addfundraiser130 {
+    width: 180px !important;
+}
+
+.perkrule.noperk {
+    font-size: 200% !important;
+    width: 100px;
+    z-index: 99999;
+    padding: 15%;
+    line-height: 100%;
+}
+
+
+.perkrule {
+	z-index: 999999 !important;
+display: inline-table !important;
+background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0% !important;
+border-radius: 10px !important;
+padding: 6%!important;
+width: 100% !important;
+border: 1px solid #333 !important;
+color: #696969 !important;
+font-size:60% !important;
+}
+.perkrule:hover, .perkrule.selected {background:#A44071 !important; color: rgb(255,255,255) !important;}
+.perkrule.selected {
+position: fixed;
+bottom: 0px;
+right: 26%;
+width: 27% !important;
+padding: 2% !important;
+border: 0px none !important;
+box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.2);
+border-radius:10px 10px 10px 0 !important;
+}
+.perkrule.selected::after {
+    content: "ELEGISTE";
+    font-size: 150% !important;
+    text-transform: uppercase;
+    position: absolute;
+    top: auto;
+    right: 4%;
+	bottom:80%;
+    color: #FFF;
+    left: auto;
+    font-family: "montserratbold";
+    border-radius: 66%;
+    background: #000 none repeat scroll 0% 0%;
+    width: 140px;
+    height: 140px;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    line-height: 120px;
+    border: 8px solid !important;
+	z-index:999999;
+}
+.perkrule.selected.noperk::after {font-size: 50% !important;}
+
+
+.perkrule:hover a {color: rgb(112, 112, 116) !important;}
+.perkrule h5 {
+    font-size: 140% !important;
+    margin: 2% 0px !important;
+}
+.perkrule h6 {
+    color: #FFF !important;
+    font-size: 140% !important;
+    border-bottom: 0px none !important;
+    line-height: 110% !important;
+}
+.perkrule h6 a {color:#A44071 !important;}
+.perkrule h6 a:hover {color:#FFF !important;}
+
+
+.perkrule .perkruledescription {
+    text-align: justify;
+}
+.perkrule.selected .perkruledescription {
+    color: #EED5E1;
+}
+.perkrule .perkruleclaimprize {
+    font-size:120%;
+	color:#FFF;
+}
+
+.scrolltotop {
+    position: fixed;
+    bottom: 0px;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.8) none repeat scroll 0% 0%;
+    color: #FFF;
+    font-size: 100%;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    left: auto;
+	z-index: 99999;
+}
+.scrolltotop::after {
+    content: "▲";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-size: 300%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    line-height: 200%;
+}
+
+.rrss {
+text-align: center;
+background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%;
+padding: 3%;
+display: inline-block;
+width: 48%;
+float: right;
+margin-top: 400px;
+}
+
+.rrss embed,
+.rrss iframe,
+.rrss object,
+.rrss video {
+    margin-bottom: 0px;
+}
+
+.rrss table {
+margin-bottom: 0; vertical-align:middle; }
+
+.rrss th, .rrss td {
+    padding: 0;
+	vertical-align:middle;
+}
+.rrss td {
+    border-width: 0;
+}
+
+
+.rrss .fb-like,
+.rrss .fb_iframe_widget,
+.rrss #twitter-widget-0,
+.rrss #___plusone_0 {
+	height:20px !important;
+	margin:4% !important;
+	padding:0 !important;
+	vertical-align:middle !important;
+}
+
+
+#tab-description p {font-size:80%;}
+
+
+/* Tienda */
+
+.archive.post-type-archive-product {
+
+background: transparent url("http://merca.cl/site/wp-content/uploads/2015/11/fondo_tienda_001.gif") no-repeat fixed 50% 50% / cover;
+position:relative;
+}
+.archive.post-type-archive-product:after {
+	background:rgba(0, 0, 0, 0.5)  url('images/mascara.png') 50% 50% repeat;
+	/*background-size:cover;*/
+	content:" ";
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	z-index:-1;
+}
+.mascara {
+	background:rgba(0, 0, 0, 0.5)  url('images/mascara.png') 50% 50% repeat;
+	/*background-size:cover;*/
+	content:" ";
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	z-index:1;
+}
+
+
+.woocommerce .woocommerce-breadcrumb {
+    margin: 0px 0px 1em;
+    padding: 0px;
+    font-size: 0.52em;
+    color: #fff;
+}
+.woocommerce .woocommerce-breadcrumb a {
+    color: #fff;
+}
+
+.twentyfifteen .t15wc .page-title {
+    color: #fff;
+    font-family: monospace;
+    font-size: 500%;
+}
+
+
+ul.products {
+    -moz-column-count:5;
+    -moz-column-gap: 1%;
+    -moz-column-width: 22%;
+
+    -webkit-column-count:5;
+    -webkit-column-gap: 1%;
+    -webkit-column-width: 22%;
+
+    column-count: 5;
+    column-gap: 1%;
+    column-width: 22%;
+	font-size:80%;
+}
+
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+float: none;
+margin: 0;
+padding: 12%;
+position: relative;
+width: 100%;
+display: inline-block;
+background: #FFF;
+
+}
+.woocommerce-page ul.products li.product {
+border-radius: 50%;
+-moz-border-radius:50%;
+-webkit-border-radius:50%;
+}
+
+
+
+/**
+ * 6.2 - Menus
+ */
+
+
+
+
+.site-header-menu {
+	display: none;
+	-webkit-flex: 0 1 100%;
+	-ms-flex: 0 1 100%;
+	flex: 0 1 100%;
+	margin: 0.875em 0;
+}
+
+.site-header-menu.toggled-on,
+.no-js .site-header-menu {
+	display: block;
+}
+
+
+
+.site-footer .main-navigation {
+	margin-bottom: 1.75em;
+}
+
+
+.main-navigation {margin:0; text-align:right;}
+
+.main-navigation ul {
+	list-style: none;
+	margin: 0;
+}
+
+.main-navigation li {
+	border-top: 1px solid #efefef;
+	position: relative;
+}
+
+.main-navigation a {
+	color: #FFF;
+	display: block;
+	line-height: 1.3125;
+	outline-offset: -1px;
+	padding: 0.84375em 0;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus {
+	color: #007acc;
+}
+
+.main-navigation .current-menu-item > a,
+.main-navigation .current-menu-ancestor > a {
+	font-weight: 700;
+}
+
+.main-navigation ul ul {
+	display: none;
+	margin-left: 0.875em;
+}
+
+.no-js .main-navigation ul ul {
+	display: block;
+}
+
+.main-navigation ul .toggled-on {
+	display: block;
+}
+
+.main-navigation .primary-menu {
+	border-bottom: 1px solid #efefef;
+}
+
+.main-navigation .menu-item-has-children > a {
+	margin-right: 56px;
+}
+
+.dropdown-toggle {
+	background-color: transparent;
+	border: 0;
+	border-radius: 0;
+	color: #fff;
+	content: "";
+	height: 48px;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	text-transform: none;
+	top: 0;
+	width: 48px;
+}
+
+.dropdown-toggle:after {
+	border: 0 solid #d1d1d1;
+	border-left-width: 1px;
+	content: "\f431";
+	font-size: 24px;
+	left: 1px;
+	position: relative;
+	width: 48px;
+}
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+	background-color: transparent;
+	color: #007acc;
+}
+
+.dropdown-toggle:focus {
+	outline: thin dotted;
+	outline-offset: -1px;
+}
+
+.dropdown-toggle:focus:after {
+	border-color: transparent;
+}
+
+.dropdown-toggle.toggled-on:after {
+	content: "\f432";
+}
+
+
+
+/* Always hide desktop menu */
+.site-header-menu {
+ display: none;
+}
+/* Always show mobile menu */
+@media screen and (min-width: 56.875em){
+ dropdown-toggle, .main-navigation ul .dropdown-toggle.toggled-on, .menu-toggle, .site-header .social-navigation, .site-footer .main-navigation {
+     display: block;
+ }
+
+  .main-navigation .primary-menu > li {
+      float: none;
+  }
+}
+
+
+
+.menu-toggle {
+    background-color: transparent;
+    border: 0 none;
+    color: #fff;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    right: 10px;
+    top: 70px;
+    z-index:99999;
+}
+
+.site-header-menu {
+    background: rgba(0,0,0,0.9) none repeat scroll 0% 0%;
+    color: rgb(255, 255, 255);
+    padding-bottom:20px;
+}
+
+@media screen and (min-width: 910px) {
+    .site-header-menu {
+        position: fixed;
+        bottom: 2%;
+        right: 2%;
+        left: 2%;
+        top: 2%;
+        margin: 0px;
+        padding: 10% 5%;
+        z-index:99999;
+    }
+    .menu-toggle.toggled-on,
+    .menu-toggle.toggled-on:hover,
+    .menu-toggle.toggled-on:focus {
+        background-color: transparent;
+        border-color: transparent;
+        color: #000;
+    }
+    .menu-toggle.toggled-on {
+      z-index: 999999;
+      position: fixed;
+      right: 10px;
+      top: 70px;
+    }
+}
+
+.secondary-toggle::before,
+.secondary-toggle.toggled-on::before {
+  font-size:4vmin !important;
+}
+
+
+.menu-toggle span {
+    font-size: 1.3vmin;
+}
+
+.menu-toggle .fa {
+    display: block;
+    width: 100%;
+    height: 0px;
+    padding-bottom: 100%;
+    margin: 0px;
+    font-size:4vmin;
+}
+
+.site-header-menu .social-navigation li {
+    float: right;
+}
+.site-header-menu .social-navigation li a {
+    border: 1px solid #000;
+    color: #fff;
+    background-color: #000;
+  }
+
+.site-header-menu .main-navigation a:hover,
+.site-header-menu .main-navigation a:focus {
+      color: #000;
+  }
+
+
+
+/* Widgets */
+
+.aspect-ratio {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 51%;
+}
+.aspect-ratio iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+/* Mailchimp */
+
+
+
+#mc_embed_signup {
+  font-size: 2vmin;
+  line-height: normal;
+  hyphens: manual;
+}
+#mc_embed_signup .mc-field-group {margin-bottom:4%;}
+#mc_embed_signup h2 {
+    margin-bottom: 6%;
+}
+#mc_embed_signup .small {font-size:80%;}
+#mc_embed_signup .img {
+  background-image: url('../../uploads/2016/02/canasto-sin-fondo_001.png');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:50% 50%;
+  width:30%;
+  height:0;
+  padding-bottom:30%;
+}
+#mc_embed_signup form {
+  width:100%;
+  padding:0;
+}
+#mc_embed_signup .img, #mc_embed_signup form {
+  float:left;
+  position:relative;
+}
+
+
+/* Instagram */
+
+.with-captions li a span {color:#fff;}
+
+
+/* Slideshow */
+
+#slideshow {
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+}
+
+
+
+/* Contact Form 7 */
+
+.wpcf7-form {}
+.wpcf7-form p {
+  padding:0;
+}
+.wpcf7-form p input {font-size:3vmin; line-height:120%;}
+
+
+/* Responsividad */
+
+
+@media all and (min-width: 1px) and (max-width: 768px) {
+
+  .site-branding {
+      width: 100%;
+      margin-right: 0;
+      min-height: 60px;
+      padding: 0;
+  }
+
+
+  .staff > li {width:49%}
+
+
+  .modulo-landing-wrapper {
+  font-size: 2.2vh;
+  }
+
+  .modulo-landing-wrapper .modulo-landing.con-sidebar .wrapper {
+  width:100% !important;
+  min-height:30vh !important;
+  }
+  .modulo-landing-wrapper .modulo-landing  .modulo_landing_barra_lateral_derecha {
+  width: 100% !important;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  min-height:30vh !important;
+  }
+
+
+.modulo-landing-wrapper .modulo-landing .modulo-landing-titulo {
+  font-size: 6vmin;
+  padding: 2% 0;
+}
+
+.modulo-landing.con-sidebar  .ml-background-img {
+    bottom:auto;
+    height:100%;
+  }
+
+  .social-navigation {
+      margin: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+  }
+
+  .site-footer .widget-area {
+    -moz-column-count:2;
+    -moz-column-gap: 4%;
+    -moz-column-width: 40%;
+    -webkit-column-count:2;
+    -webkit-column-gap: 4%;
+    -webkit-column-width: 40%;
+    column-count: 2;
+    column-gap: 4%;
+    column-width: 40%;
+  }
+
+
+}
+
+@media all and (min-width: 1px) and (max-width: 420px) {
+  .staff > li {width:99%}
+}
+
+/**
+ * iPad with portrait orientation.
+ */
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+	.modulo-landing-wrapper {
+	font-size: 100%;
+	}
+
+	.modulo-landing-wrapper .modulo-landing .modulo-landing-ontop {
+    height: 100%;
+    padding: 25vh 11vw;
+    width: 100%;
+	}
+
+	.modulo-landing-wrapper .modulo-landing  video,
+.modulo-landing-wrapper .modulo-landing .modulo-landing-mascara-video	{
+	display:none;
+	}
+		.modulo-landing-wrapper .modulo-landing.con-sidebar .wrapper {
+	width:100%;
+	}
+	.modulo-landing-wrapper .modulo-landing  .modulo_landing_barra_lateral_derecha {
+	width: 80%;
+	}
+
+}
+
+
+/**
+ * iPad with landscape orientation.
+ */
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+	.modulo-landing-wrapper {
+	font-size: 100%;
+	}
+	.modulo-landing-wrapper .modulo-landing .modulo-landing-ontop {
+    height: 100%;
+    padding: 25vh 11vw;
+    width: 100%;
+	}
+	.modulo-landing-wrapper .modulo-landing  video,
+.modulo-landing-wrapper .modulo-landing .modulo-landing-mascara-video	{
+	display:none;
+
+
+	}
+		.modulo-landing-wrapper .modulo-landing.con-sidebar .wrapper {
+	width:100%;
+	}
+	.modulo-landing-wrapper .modulo-landing  .modulo_landing_barra_lateral_derecha {
+	width: 100%;
+	}
+
+	.perkrule {
+    padding: 2% !important;
+    font-size: 50% !important;
+}
+.perkrule .perkruledescription,
+.perkrule .perkruleclaimprize {
+    display: none;
+}
+	.perkrule.selected .perkruledescription {display:block;}
+
+	.perkrule h5 {
+    font-size: 140% !important;
+    margin: 0px !important;
+}
+.perkrule h6 {
+    font-size: 140% !important;
+    border-bottom: 0px none !important;
+    line-height: 110% !important;
+    margin: 0px;
+}
+.perkrule p {
+    margin-bottom: 0px;
+}
+
+
+
+}
+
+
+/**
+ * iPhone 5
+ * You can also target devices with aspect ratio.
+ */
+
+
+@media screen and (device-aspect-ratio: 40/71) {
+	.modulo-landing-wrapper {
+	font-size: 100%;
+	}
+	.modulo-landing-wrapper .modulo-landing .modulo-landing-ontop {
+    height: 100%;
+    padding: 25vh 11vw;
+    width: 100%;
+	}
+	.modulo-landing-wrapper .modulo-landing  video,
+.modulo-landing-wrapper .modulo-landing .modulo-landing-mascara-video	{
+	display:none;
+	}
+
+	.modulo-landing-wrapper .modulo-landing.con-sidebar .wrapper {
+	width:100%;
+	}
+	.modulo-landing-wrapper .modulo-landing  .modulo_landing_barra_lateral_derecha {
+	width: 100%;
+	}
+
+
+}
+/*
+iPhone 5 & 5S Media Queries
+iPhone 5 & 5S in portrait & landscape
+*/
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) { /* STYLES GO HERE */}
+/*
+iPhone 5 & 5S in landscape
+*/
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) { /* STYLES GO HERE */}
+/*
+iPhone 5 & 5S in portrait
+*/
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) { /* STYLES GO HERE */ }
