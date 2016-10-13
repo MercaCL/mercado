@@ -19,12 +19,12 @@ CREATE TABLE `wp_73g366_revisr` (
   `event` varchar(42) NOT NULL,
   `user` varchar(60) DEFAULT NULL,
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `wp_73g366_revisr` WRITE;
 /*!40000 ALTER TABLE `wp_73g366_revisr` DISABLE KEYS */;
-INSERT INTO `wp_73g366_revisr` VALUES (1,'2016-10-12 20:19:48','Successfully created a new repository.','init','dev_0c27rr');
+INSERT INTO `wp_73g366_revisr` VALUES (1,'2016-10-12 20:19:48','Successfully created a new repository.','init','dev_0c27rr'),(2,'2016-10-12 20:21:13','Successfully backed up the database.','backup','dev_0c27rr'),(3,'2016-10-12 20:21:21','Committed <a href=\"http://dev.merca.cl/site/wp-admin/admin.php?page=revisr_view_commit&commit=46e509d&success=true\">#46e509d</a> to the local repository.','commit','dev_0c27rr');
 /*!40000 ALTER TABLE `wp_73g366_revisr` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
